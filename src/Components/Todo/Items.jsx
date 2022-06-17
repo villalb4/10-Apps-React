@@ -43,16 +43,18 @@ function Items({item , onUpdate, onDelete}) {
     }
 
     return (
-      <div>
+      <div className="Component_item">
         {item.title}
-        <button onClick={handleClick}>Edit</button>
-        <button onClick={handleDelete}>Delete</button>
+        <div className="item_button">
+          <button className="edit_button" onClick={handleClick}>Edit</button>
+          <button className="delete_button" onClick={handleDelete}>Delete</button>
+        </div>
       </div>
     )
   }
 
   return (
-    <div>{edit ? <ItemEdit /> : <Element />}</div>
+    <div className="Items">{edit ? <ItemEdit /> : <Element />}</div>
   )
 }
 

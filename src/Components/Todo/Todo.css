@@ -1,0 +1,78 @@
+.Todo {
+  margin: 100px auto 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 350px;
+  min-height: 100px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.137);
+}
+.Todo_form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input_todo {
+  border: none;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  padding: 0 10px;
+  width: 200px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.input_todo:hover {
+  border-color: rgba(52, 140, 255, 0.133);
+}
+.input_todo:focus {
+  outline: none;
+  border-color: rgba(113, 212, 255, 0.259);;
+}
+
+.create_todo {
+  border: none;
+  background-color: rgb(0, 145, 255);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.create_todo:hover {
+  background-color: rgb(28, 128, 243);
+}
+
+.Items_container {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Items {
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.Component_item {
+  display: flex;
+  justify-content: space-between;
+}
+.item_button {
+  display: flex;
+  gap: 10px;
+}
+
+.edit_button ,
+.delete_button {
+  padding: 2px 3.5px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+}
+.edit_button {
+  background-color: rgb(0, 128, 255);
+}
+.delete_button {
+  background-color: rgb(213, 1, 1);
+}
