@@ -21,6 +21,13 @@ function Todo() {
     setTodos([...todos, newTodo])
   }
 
+  function handleUpdate(id, value) {
+    const temp = [...todos]
+    const item = temp.find(i => i.id === id);
+    item.title = value;
+    setTodos(temp)
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -35,11 +42,11 @@ function Todo() {
         />
       </form>
 
-      <ul>
+      <div>
         {todos.map((e,i) => (
-          <Items key={i} item={e} />
+          <Items key={i} item={e} onUpdate={handleUpdate} />
         ))}
-      </ul>
+      </div>
 
     </div>
   )
