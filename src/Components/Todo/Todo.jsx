@@ -28,6 +28,11 @@ function Todo() {
     setTodos(temp)
   }
 
+  function handleDelete(id) {
+    const temp = todos.filter(i => i.id !== id)
+    setTodos(temp)
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -44,7 +49,7 @@ function Todo() {
 
       <div>
         {todos.map((e,i) => (
-          <Items key={i} item={e} onUpdate={handleUpdate} />
+          <Items key={i} item={e} onUpdate={handleUpdate} onDelete={handleDelete}/>
         ))}
       </div>
 

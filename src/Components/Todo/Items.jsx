@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Items({item , onUpdate}) {
+function Items({item , onUpdate, onDelete}) {
 
   const [edit, setEdit] = useState(false)
 
@@ -34,15 +34,19 @@ function Items({item , onUpdate}) {
   // ----COMPONENT----
   function Element() {
 
-    function handleClick(e){
+    function handleClick(){
       setEdit(true)
+    }
+
+    function handleDelete(){
+      onDelete(item.id)
     }
 
     return (
       <div>
         {item.title}
         <button onClick={handleClick}>Edit</button>
-        <button>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     )
   }
