@@ -44,11 +44,12 @@ function Todo() {
           type="text" 
           onChange={handleChange}
           value={title}
+          placeholder="Add a new task"
         />
         <input
           className="create_todo"
           type="submit" 
-          value="Create todo"
+          value="Create ToDo"
           onClick={handleSubmit}
         />
       </form>

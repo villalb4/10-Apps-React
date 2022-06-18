@@ -24,9 +24,9 @@ function Items({item , onUpdate, onDelete}) {
     }
 
     return (
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" value={value}/>
-        <button onClick={handleClick}>Update</button>
+      <form className="form_update" onSubmit={handleSubmit}>
+        <input className="input_update" onChange={handleChange} type="text" value={value}/>
+        <button className="button_update" onClick={handleClick}>Update</button>
       </form>
     )
   }
@@ -44,7 +44,7 @@ function Items({item , onUpdate, onDelete}) {
 
     return (
       <div className="Component_item">
-        {item.title}
+        <span className="title">{item.title}</span>
         <div className="item_button">
           <button className="edit_button" onClick={handleClick}>Edit</button>
           <button className="delete_button" onClick={handleDelete}>Delete</button>
