@@ -19,7 +19,7 @@ function Weather() {
     try {
       // const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)
 
-      const request = (await axios(`http://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)).data
+      const request = (await axios(`https://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)).data
       
       // const json = await request.json()
       // console.log(json)
