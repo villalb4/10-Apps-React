@@ -16,9 +16,9 @@ function WeatherForm({onChangeCity}) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} />
+    <div className="weatherForm">
+      <form className="form" onSubmit={handleSubmit}>
+        <input className="input" type="text" onChange={handleChange} placeholder="Location"/>
       </form>
     </div>
   )
