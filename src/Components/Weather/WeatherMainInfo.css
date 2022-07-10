@@ -8,13 +8,19 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
+  font-family: 'monospace';
+  font-weight: 600;
   font-size: 18px;
-  color: rgb(80, 80, 80);
+  color: rgb(107, 107, 107);
 }
 .location {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.location_name {
+  font-size: 25px;
+  color: #2d2d2d;
 }
 .icon_temp {
   display: flex;

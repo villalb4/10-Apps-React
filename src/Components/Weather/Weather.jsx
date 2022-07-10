@@ -39,7 +39,7 @@ function Weather() {
   return (
     <div className="Weather">
       <WeatherForm onChangeCity={handleChangeCity} />
-      <WatherMainInfo weather={weather} />
+      {weather ? <WatherMainInfo weather={weather} /> : "Cargando..."}
     </div>
   )
 }

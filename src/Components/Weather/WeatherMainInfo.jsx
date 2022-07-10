@@ -6,7 +6,7 @@ function WatherMainInfo({weather}){
     <div className='info_weather'>
       <div className='div_info'>
         <div className='location'>
-          <div>{weather?.location.name}</div>
+          <div className='location_name'>{weather?.location.name}</div>
           <div>{weather?.location.country}</div>
         </div>
 
