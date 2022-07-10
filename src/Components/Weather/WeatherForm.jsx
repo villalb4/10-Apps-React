@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './WeatherForm.css';
 
 function WeatherForm({onChangeCity}) {
   const [city, setCity] = useState('');

@@ -1,0 +1,22 @@
+
+.weatherForm {
+  width: 100%;
+}
+.input {
+  border: none;
+  background-color: rgb(238, 238, 238);
+  border-radius: 4px;
+  padding: 8px 10px;
+  width: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #616161;
+}
+.input:hover {
+  border-color: rgba(52, 140, 255, 0.133);
+}
+.input:focus {
+  outline: none;
+  border-color: rgba(113, 212, 255, 0.259);;
+}

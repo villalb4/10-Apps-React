@@ -1,3 +1,33 @@
-.info {
-  background-color: brown;
+.info_weather {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.div_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 18px;
+  color: rgb(80, 80, 80);
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.icon_temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  width: 50px;
+}
+.temp {
+  display: flex;
+  gap: 5px;
+}
+.mapa {
+  border-radius: 8px;
 }

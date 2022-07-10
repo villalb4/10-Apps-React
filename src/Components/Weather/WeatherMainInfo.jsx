@@ -3,26 +3,30 @@ import './WeatherMainInfo.css'
 
 function WatherMainInfo({weather}){
   return(
-    <div className='info'>
-      <div>{weather?.location.name}</div>
-      <div>{weather?.location.country}</div>
+    <div className='info_weather'>
+      <div className='div_info'>
+        <div className='location'>
+          <div>{weather?.location.name}</div>
+          <div>{weather?.location.country}</div>
+        </div>
 
-      <div>
-        <div>
-          <img src={`http:${weather?.current.condition.icon}`}width="128px" alt="icon" />
+        <div className='icon_temp'>
+          <div>
+            <img className='icon' src={`http:${weather?.current.condition.icon}`}width="128px" alt="icon" />
+          </div>
+          <div className='temp'>
+            <div>{weather?.current.condition.text}</div>
+            <div>{weather?.current.temp_c}°</div>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div>{weather?.current.condition.text}</div>
-        <div>{weather?.current.temp_c}°</div>
-      </div>
-
       <iframe
+        className="mapa"
         title='mapa'
         src={`https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50262.75110565523!2d${weather?.location.lon}!3d${weather?.location.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1657486900979!5m2!1ses-419!2sar`}
-        width="460" 
-        height="450" 
+        width="360" 
+        height="350" 
         style={{border:0 }}
         // allowfullscreen="" 
         loading="lazy" 
