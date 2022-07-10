@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WeatherForm from "./WeatherForm";
-import WatherMainInfo from './WeatherMainInfo'
+import WatherMainInfo from './WeatherMainInfo';
+import axios from "axios";
 import "./Weather.css"
 
 function Weather() {
@@ -16,12 +17,14 @@ function Weather() {
 
   async function loadInfo(city){
     try {
-      const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)
-      
-      const json = await request.json()
-      console.log(json)
+      // const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)
 
-      setWeather(json)
+      const request = (await axios(`http://api.weatherapi.com/v1/current.json?key=27bc4232fd34492d89d51117221806&q=${city}`)).data
+      
+      // const json = await request.json()
+      // console.log(json)
+
+      setWeather(request)
 
     } catch (error) {
       console.log(error)
