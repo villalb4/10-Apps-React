@@ -1,6 +1,7 @@
 import React from "react";
 import Todo from "./Components/Todo/Todo";
 import Weather from "./Components/Weather/Weather";
+import Emoji from "./Components/Emojis/Emoji";
 import "./App.css"
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Todo />
       <Weather />
+      <Emoji />
     </div>
   )
 }
