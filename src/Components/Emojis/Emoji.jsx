@@ -6,15 +6,10 @@ function Emoji() {
 
   const refInput = useRef(null);
 
-  function handleClick() {
-    refInput.current.focus();
-  }
-
   return (
     <div className="Emoji">
       <input type="text" ref={refInput}/>
-      <button onClick={handleClick}>Da click</button>
-      <EmojiPicker />
+      <EmojiPicker ref={refInput} />
     </div>
   )
 }

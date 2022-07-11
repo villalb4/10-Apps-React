@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     symbol: "😊",
     name: "cara feliz",
@@ -30,3 +30,5 @@ export const data = [
     keywords: "respira cansado"
   },
 ]
+
+export default data
